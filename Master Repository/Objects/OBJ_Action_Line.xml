@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SunopsisExport>
+<Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="wIb8dwZHGcwfWXLMSm0a7w==" exportKeySalt="5a631e07-d99b-4d24-bf07-4861ddfedbb9" containsCipherText="false"/>
+<Object class="com.sunopsis.dwg.dbobj.SnpObject">
+		<Field name="ExtVersion" type="java.lang.String">null</Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[67af6126-eec0-37a5-a885-7f55c5cc6b82]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[I]]></Field>
+	<Field name="IntJavaName" type="java.lang.String"><![CDATA[com.sunopsis.dwg.dbobj.SnpLineAction]]></Field>
+	<Field name="IObjects" type="com.sunopsis.sql.DbInt"><![CDATA[7300]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="ObjName" type="java.lang.String"><![CDATA[OBJ_SNPLINEACTION_7300]]></Field>
+	<Field name="SecuPos" type="com.sunopsis.sql.DbInt"><![CDATA[140]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpMethod">
+		<Field name="DispPopUp" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[55c18742-2d65-3376-85c3-c1402bb6d6e3]]></Field>
+	<Field name="GrantCreator" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndImp" type="java.lang.String">null</Field>
+	<Field name="IndNew" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="IntJavaName" type="java.lang.String"><![CDATA[edit]]></Field>
+	<Field name="IMeth" type="com.sunopsis.sql.DbInt"><![CDATA[50300]]></Field>
+	<Field name="IObjects" type="com.sunopsis.sql.DbInt"><![CDATA[7300]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Position" type="com.sunopsis.sql.DbInt"><![CDATA[10]]></Field>
+	<Field name="ShortName" type="java.lang.String"><![CDATA[METH_EDIT_50300]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpMethod">
+		<Field name="DispPopUp" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[39c45849-0f28-3b71-b725-52d4f9cd212f]]></Field>
+	<Field name="GrantCreator" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndImp" type="java.lang.String">null</Field>
+	<Field name="IndNew" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="IntJavaName" type="java.lang.String"><![CDATA[consult]]></Field>
+	<Field name="IMeth" type="com.sunopsis.sql.DbInt"><![CDATA[50500]]></Field>
+	<Field name="IObjects" type="com.sunopsis.sql.DbInt"><![CDATA[7300]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Position" type="com.sunopsis.sql.DbInt"><![CDATA[30]]></Field>
+	<Field name="ShortName" type="java.lang.String"><![CDATA[METH_CONSULT_50500]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpMethod">
+		<Field name="DispPopUp" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[706fa466-d4ad-3084-99b3-16ee3fc63fba]]></Field>
+	<Field name="GrantCreator" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndImp" type="java.lang.String">null</Field>
+	<Field name="IndNew" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IntJavaName" type="java.lang.String"><![CDATA[insert]]></Field>
+	<Field name="IMeth" type="com.sunopsis.sql.DbInt"><![CDATA[50200]]></Field>
+	<Field name="IObjects" type="com.sunopsis.sql.DbInt"><![CDATA[7300]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Position" type="com.sunopsis.sql.DbInt"><![CDATA[40]]></Field>
+	<Field name="ShortName" type="java.lang.String"><![CDATA[METH_INSERT_50200]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpMethod">
+		<Field name="DispPopUp" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[3ac6563b-aa73-3699-b7da-e541150a2890]]></Field>
+	<Field name="GrantCreator" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndImp" type="java.lang.String">null</Field>
+	<Field name="IndNew" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="IntJavaName" type="java.lang.String"><![CDATA[duplicate]]></Field>
+	<Field name="IMeth" type="com.sunopsis.sql.DbInt"><![CDATA[53900]]></Field>
+	<Field name="IObjects" type="com.sunopsis.sql.DbInt"><![CDATA[7300]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Position" type="com.sunopsis.sql.DbInt"><![CDATA[50]]></Field>
+	<Field name="ShortName" type="java.lang.String"><![CDATA[METH_DUPLICATE_53900]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpMethod">
+		<Field name="DispPopUp" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[1ecec53c-5edb-3ba9-9c27-8c275bebc795]]></Field>
+	<Field name="GrantCreator" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndImp" type="java.lang.String">null</Field>
+	<Field name="IndNew" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="IntJavaName" type="java.lang.String"><![CDATA[delete]]></Field>
+	<Field name="IMeth" type="com.sunopsis.sql.DbInt"><![CDATA[50600]]></Field>
+	<Field name="IObjects" type="com.sunopsis.sql.DbInt"><![CDATA[7300]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:42:48.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Position" type="com.sunopsis.sql.DbInt"><![CDATA[60]]></Field>
+	<Field name="ShortName" type="java.lang.String"><![CDATA[METH_DELETE_50600]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_OBJECT.7300]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[67af6126-eec0-37a5-a885-7f55c5cc6b82]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Action Line]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_OBJECT]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[11]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.DwgExportSummary">
+		<Field name="ExpTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="InstObjNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="LinkDiagNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MorigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MtxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OrigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OtherObjectsNb" type="com.sunopsis.sql.DbInt"><![CDATA[6]]></Field>
+	<Field name="PlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="StepNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="TxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeOrigNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeUsedNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="VarPlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="ScenTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OdiVersion" type="java.lang.String"><![CDATA[12.2.1]]></Field>
+	<Field name="OriginRepositoryID" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="RepositoryVersion" type="java.lang.String"><![CDATA[05.02.02.05]]></Field>
+</Object>
+</SunopsisExport>
