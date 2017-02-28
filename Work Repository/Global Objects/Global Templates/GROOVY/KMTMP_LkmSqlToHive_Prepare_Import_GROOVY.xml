@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SunopsisExport>
+<Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="TRp55/u7eBheGxYhDH0okQ==" exportKeySalt="cf9b2e97-d3ad-471f-bdba-f12d550e5e0e" containsCipherText="false"/>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplate">
+		<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:47:21.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[fa46f0fe-2d00-11e6-9445-00163e1ffd72]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[I]]></Field>
+	<Field name="IndIsSeeded" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndLangTrans" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndReplNl" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[161]]></Field>
+	<Field name="LangName" type="java.lang.String"><![CDATA[GROOVY]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:47:21.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[LkmSqlToHive_Prepare_Import]]></Field>
+	<Field name="TechnoName" type="java.lang.String"><![CDATA[GROOVY]]></Field>
+	<Field name="TemplateText" type="java.lang.String"><![CDATA[
+  /* Prepare some variables */
+/*
+    isFromOracle   = odiRef.getInfo("SRC_TECHNO_NAME").equalsIgnoreCase("ORACLE");
+    isFromTeradata = odiRef.getInfo("SRC_TECHNO_NAME").equalsIgnoreCase("TERADATA");
+    isFromMsSQL    = odiRef.getInfo("SRC_TECHNO_NAME").equalsIgnoreCase("Microsoft SQL Server");
+    isFromMySQL    = odiRef.getInfo("SRC_TECHNO_NAME").equalsIgnoreCase("MySQL");
+    isFromIbmDb2Udb= odiRef.getInfo("SRC_TECHNO_NAME").equalsIgnoreCase("IBM DB2 UDB");
+    isFromNetezza  = odiRef.getInfo("SRC_TECHNO_NAME").equalsIgnoreCase("Netezza");
+    
+    isToFile       = $[isToFile]; //odiRef.getInfo("DEST_TECHNO_NAME").equalsIgnoreCase("FILE");
+    isToHive       = odiRef.getInfo("DEST_TECHNO_NAME").equalsIgnoreCase("HIVE");
+    isToHBase      = odiRef.getInfo("DEST_TECHNO_NAME").equalsIgnoreCase("HBASE");
+    isFromTeradataToHive = isFromTeradata && isToHive;
+    createTargetTable = odiRef.getOption("CREATE_TARG_TABLE").equals("1");
+    useGeneric     = odiRef.getOption("USE_GENERIC_JDBC_CONNECTOR").equals("1");
+*/
+
+/*
+    // If USE_HIVE_STAGING_TABLE=0, all target columns must be mapped.
+    useHiveStagingTable = odiRef.getOption("USE_HIVE_STAGING_TABLE").equals("1");
+    if ( !useHiveStagingTable ) {
+        noTargetCols = odiRef.getTargetColList("", "X", "", "", "").length();
+        noMappedCols = odiRef.getColList("", "X", "", "", "").length();
+        // Do all target columns have a mapping?
+        if ( noTargetCols != noMappedCols ) {
+            throw new OdiKmException(
+            "ODIKM-HADOOP-IKM-10000", "ODIKM-HADOOP-IKM-10000: for USE_HIVE_STAGING_TABLE=false all target columns must have a mapping.", 
+            null );
+        }
+        useHiveStagingTable = false;
+    }
+    
+    // TRUNCATE=1 only works with USE_HIVE_STAGING_TABLE=0. This is because HIVE-446 has not been implemented, yet.
+    isTruncate = odiRef.getOption("TRUNCATE").equals("1");
+    if ( isToHive && !useHiveStagingTable && isTruncate ) {
+        throw new OdiKmException(
+        "ODIKM-HADOOP-IKM-10000", "ODIKM-HADOOP-IKM-10000: TRUNCATE=true is only supported with USE_HIVE_STAGING_TABLE=true. Please either disable TRUNCATE or enable USE_HIVE_STAGING_TABLE.", 
+        null );
+    }
+    
+    // TRUNCATE=1 is mandatory for file targets, as SQOOP requires the target directory not to exist. This check ensures that the user actively confirms that the target directory can be dropped.
+    if ( isToFile && !isTruncate ) {
+        throw new OdiKmException(
+        "ODIKM-HADOOP-IKM-10000", "ODIKM-HADOOP-IKM-10000: For File targets TRUNCATE must be set to true.", 
+        null );
+    }
+*/
+
+<$ 	/* Calculate path names and file names */   
+    import java.io.File;
+    
+    tempPath = $[tempPath];
+    tempPath = (tempPath.length()==0) ? System.getProperty("java.io.tmpdir") : tempPath;
+    tempSessionDir = tempPath + "/" + "odi_"+odiRef.getSession("SESS_GUID")+"_"+odiRef.getStep( "NNO" )+"_"+ odiRef.getSession("CONTEXT_CODE");
+    tempPath = tempSessionDir;
+           
+    sqoopStdOutFileName = tempPath + "/" + "odi.out";
+    sqoopErrFileName =    tempPath + "/" + "odi.err";
+    sqoopOptionFile =     tempPath + "/" + "odi.sqoop";
+    
+    targetDir = $[targetDir];
+        
+    /* Get some env vars */ 
+    odiSqoopJars = odiRef.getDataServerProperty( "SQOOP_LIBJARS", "DEST" );
+    if (odiSqoopJars == null || odiSqoopJars.length() == 0 ) { odiSqoopJars = ""; } else {
+    odiSqoopJars = "-libjars " + (char)10 + odiSqoopJars; };
+ 
+    odiSqoopJavaHome = odiRef.getDataServerProperty( "SQOOP_JAVA_HOME", "DEST" );
+    if (odiSqoopJavaHome == null || odiSqoopJavaHome.length() == 0 ) { odiSqoopJavaHome = ""; } else {
+    odiSqoopJavaHome = "export JAVA_HOME=" + odiSqoopJavaHome + ";"; };               
+ 
+    {# IF ( $[isToHive] == 'true' ) #}
+        hiveTableName = $[hiveTableName];
+    {# ENDIF #}
+    
+    {# IF ( $[isToHBase] == 'true' ) #}
+        hBaseTableName = $[hBaseTableName];
+    {# ENDIF #}
+            
+        /* Validate FF values */
+        
+        {# IF ( $[isToHive] == 'true' ) #}
+        if ( $[hiveMetastoreUrisQuoted].startsWith("<Please specify") ) {
+                        throw new OdiKMException(
+                "ODIKM-HADOOP-IKM-10000", "ODIKM-HADOOP-IKM-10000: FlexField HIVE_METASTORE_URIS has not been set on Hive DataServer.", 
+                null );
+        };
+        {# ENDIF #}
+
+        {# IF ( $[isToHBase] == 'true' ) #}
+        hBaseTableName = $[hBaseTableName];
+        if ( $[hBaseQuorumQuoted].startsWith("<Please specify") ) {
+                        throw new OdiKMException(
+                "ODIKM-HADOOP-IKM-10000", "ODIKM-HADOOP-IKM-10000: FlexField HBASE_QUORUM has not been set on HBase DataServer.", 
+                null );
+        };
+        {# ENDIF #}
+
+
+        /* Some more Hive checks */
+        {# IF ( $[isToHive] == 'true' ) #}
+        /* Currently only the Hive DEFAULT database is supported. Verify: */
+        if ( false && !<?=odiRef.getQuotedString(odiRef.getInfo("DEST_SCHEMA")).toUpperCase()?>.equals("DEFAULT") ) {
+                        throw new OdiKmException(
+                "ODIKM-HADOOP-IKM-10000", "ODIKM-HADOOP-IKM-10000: Only the Hive default database is supported. Current target schema is {0}.", 
+                new String[] { <?=odiRef.getQuotedString(odiRef.getInfo("DEST_SCHEMA"))?> }  );
+        };
+        {# ENDIF #}
+
+$>
+]]></Field>
+	<Field name="TemplateVersion" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplateJoin">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[7b15b54d-d0e4-4848-bdbb-5c46939c2fb4]]></Field>
+	<Field name="ISnpKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[161]]></Field>
+	<Field name="ISnpTrt" type="com.sunopsis.sql.DbInt"><![CDATA[66]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplateJoin">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[6468609b-b545-4ead-bb2b-aec1c9718de7]]></Field>
+	<Field name="ISnpKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[161]]></Field>
+	<Field name="ISnpTrt" type="com.sunopsis.sql.DbInt"><![CDATA[68]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplateJoin">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[39f83e13-a20b-4b97-972d-59ab687b15c6]]></Field>
+	<Field name="ISnpKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[161]]></Field>
+	<Field name="ISnpTrt" type="com.sunopsis.sql.DbInt"><![CDATA[67]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TRT.66]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[FBA00EADFA780AA6E04311C1E40A6B08]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[LKM SQL to Hive SQOOP]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_TRT]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[21]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_KMTEMPLATE.161]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[fa46f0fe-2d00-11e6-9445-00163e1ffd72]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[LkmSqlToHive_Prepare_Import]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_KMTEMPLATE]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[27]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TRT.68]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[FBF0D5B45C9B0ADBE04311C1E40ABBFE]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[LKM SQL to HBase SQOOP Direct]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_TRT]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[29]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TRT.67]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[FBF0D5B45C9A0ADBE04311C1E40ABBFE]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[LKM SQL to File SQOOP Direct]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_TRT]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[28]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.DwgExportSummary">
+		<Field name="ExpTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="InstObjNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="LinkDiagNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MorigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MtxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OrigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OtherObjectsNb" type="com.sunopsis.sql.DbInt"><![CDATA[4]]></Field>
+	<Field name="PlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="StepNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="TxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeOrigNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeUsedNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="VarPlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="ScenTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OdiVersion" type="java.lang.String"><![CDATA[12.2.1]]></Field>
+	<Field name="OriginRepositoryID" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="RepositoryVersion" type="java.lang.String"><![CDATA[05.02.02.05]]></Field>
+</Object>
+</SunopsisExport>
