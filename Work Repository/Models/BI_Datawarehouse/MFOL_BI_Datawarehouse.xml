@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SunopsisExport>
 <Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
-<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="SJivNFBAsNI5kUrJJ9vAJg==" exportKeySalt="3c1226a2-a2f7-42c3-929e-12300aec589e" containsCipherText="false"/>
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="YPDbMfldXgfT4vI02MoZpA==" exportKeySalt="2280bf96-c506-4f88-804c-53f2eb743139" containsCipherText="false"/>
 <Object class="com.sunopsis.dwg.dbobj.SnpModFolder">
 		<Field name="ExtVersion" type="java.lang.String">null</Field>
 	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 23:48:52.0]]></Field>
@@ -11,7 +11,7 @@
 	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
 	<Field name="IModFolder" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
 	<Field name="ITxtDescription" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
-	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-15 09:36:49.0]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
 	<Field name="LastUser" type="java.lang.String"><![CDATA[SUPERVISOR]]></Field>
 	<Field name="ModFolderName" type="java.lang.String"><![CDATA[BI Datawarehouse]]></Field>
 	<Field name="ParIModFolder" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
@@ -22,7 +22,7 @@
 	<Field name="SubType" type="java.lang.String">null</Field>
 	<Field name="Name" type="java.lang.String"><![CDATA[BI DataWarehouse]]></Field>
 	<Field name="GlobalId" type="java.lang.String"><![CDATA[c181683e-3936-4261-a7fa-868cc3dea394]]></Field>
-	<Field name="Version" type="java.lang.String"><![CDATA[f3f86c2c2d8f04c908b686a5d2db36f439824a47]]></Field>
+	<Field name="Version" type="java.lang.String"><![CDATA[a3522fb8e07aad51f6445b8825ba0f5a3bbd4d14]]></Field>
 	<Field name="Path" type="java.lang.String"><![CDATA[BI_DataWarehouse/MOD_BI_DataWarehouse.xml]]></Field>
 </Object>
 <Object class="com.sunopsis.dwg.DwgExportSummary">
