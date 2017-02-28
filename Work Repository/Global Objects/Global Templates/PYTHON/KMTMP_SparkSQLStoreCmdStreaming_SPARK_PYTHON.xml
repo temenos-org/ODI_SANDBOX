@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SunopsisExport>
+<Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="FubIb4nnGzWM9ob1MAOudQ==" exportKeySalt="4be373f9-523c-4cc8-881c-6c1cb9fd7b53" containsCipherText="false"/>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplate">
+		<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:47:21.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[fa46e226-2d00-11e6-9406-00163e1ffd72]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[I]]></Field>
+	<Field name="IndIsSeeded" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndLangTrans" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndReplNl" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[101]]></Field>
+	<Field name="LangName" type="java.lang.String"><![CDATA[PYTHON]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:47:21.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[SparkSQLStoreCmdStreaming]]></Field>
+	<Field name="TechnoName" type="java.lang.String"><![CDATA[SPARK_PYTHON]]></Field>
+	<Field name="TemplateText" type="java.lang.String"><![CDATA[
+def getSqlContextInstance(sparkContext): 
+  if ('sqlContextSingletonInstance' not in globals()): 
+     globals()['sqlContextSingletonInstance'] = SQLContext(sparkContext) 
+  return globals()['sqlContextSingletonInstance']     
+
+def getDf( rdd ):
+  sqlctx = getSqlContextInstance(rdd.context)
+  {# IF ($[DF_INFER_SCHEMA] == 'false') #}
+  schema = StructType([{# FOR ($[TGT_SCHEMA_TYPES]) IN ($[TGT_SCHEMA_TYPE]) SEP = ',
+  ' #}   
+    StructField($[TGT_SCHEMA_TYPE], True) {# ENDFOR #}])
+  df = sqlctx.createDataFrame(rdd, schema)
+  {# ELSE #}
+  {# IF ($[DF_SAMPLING_RATIO] == '0') #}
+  df = sqlctx.createDataFrame(rdd)
+  {# ELSE #}
+  df = sqlctx.createDataFrame(rdd, None, $[DF_SAMPLING_RATIO] )
+  {# ENDIF #}
+  {# ENDIF #}
+  return df
+    	             
+def process(time, rdd):
+  print("========= %s, %s =========" % (type(rdd).__name__, str(time)))  
+    
+  try:    	
+        rowRdd = rdd
+        if rowRdd.isEmpty():
+            print("No rows")
+            return
+        print("Some rows")
+        if 'DataFrame' not in type(rowRdd).__name__ :
+           rowRdd_def = Row({# FOR ($[TGT_COLUMN_NAMES]) IN ($[TGT_COLUMN_NAME]) SEP = ','#} '$[TGT_COLUMN_NAME]' {# ENDFOR #})
+           rowRdd = rowRdd.map(lambda row : rowRdd_def ({# FOR ($[TGT_COLUMN_NAMES]) IN ($[TGT_COLUMN_NAME]) SEP = ','#} row['$[TGT_COLUMN_NAME]'] {# ENDFOR #} if isinstance(row,dict) else row))
+        {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}
+        for line in rowRdd.collect() :
+          print line
+        {# ENDIF #}
+        df = getDf(rowRdd)
+        print("========= %s =========" % type(df).__name__)
+        {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}    
+        df.show()
+        df.printSchema()
+        {# ENDIF #}
+    
+        props =  getSqlJDBCProps(rdd.context)
+    
+        url = "$[JDBC_URL]"
+        driver = "$[JDBC_DRIVER]"
+        target_table = '$[SQL_TARGET_TABLE_NAME]'
+
+        df.write.jdbc(url, target_table, 'append', props)
+
+  except:
+        raise 
+    
+$[SRC_ALIAS].foreachRDD(process)
+    
+    ]]></Field>
+	<Field name="TemplateVersion" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.DwgExportSummary">
+		<Field name="ExpTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="InstObjNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="LinkDiagNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MorigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MtxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OrigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OtherObjectsNb" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="PlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="StepNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="TxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeOrigNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeUsedNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="VarPlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="ScenTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OdiVersion" type="java.lang.String"><![CDATA[12.2.1]]></Field>
+	<Field name="OriginRepositoryID" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="RepositoryVersion" type="java.lang.String"><![CDATA[05.02.02.05]]></Field>
+</Object>
+</SunopsisExport>
