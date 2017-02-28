@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SunopsisExport>
 <Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
-<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="Pt4+Qy6Zj0SfmdULmzalFw==" exportKeySalt="9ebaa6c2-7042-4ebf-b9c1-4db1dc69bde8" containsCipherText="false"/>
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="N4siUyJputlmnpnkvQbv3A==" exportKeySalt="0c9281c0-9369-4e98-b456-203cb0213681" containsCipherText="false"/>
 <Object class="com.sunopsis.dwg.dbobj.SnpModel">
 		<Field name="AliasLength" type="com.sunopsis.sql.DbInt"><![CDATA[35]]></Field>
 	<Field name="BegVersion" type="java.sql.Timestamp">null</Field>
@@ -25,7 +25,7 @@
 	<Field name="ITrtSkm" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="ITxtMod" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="LagentName" type="java.lang.String">null</Field>
-	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-15 09:36:49.0]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
 	<Field name="LastUser" type="java.lang.String"><![CDATA[SUPERVISOR]]></Field>
 	<Field name="LschemaName" type="java.lang.String"><![CDATA[BI_DATAWAREHOUSE]]></Field>
 	<Field name="ModName" type="java.lang.String"><![CDATA[BI DataWarehouse]]></Field>
@@ -65,7 +65,7 @@
 	<Field name="SubType" type="java.lang.String">null</Field>
 	<Field name="Name" type="java.lang.String"><![CDATA[Global]]></Field>
 	<Field name="GlobalId" type="java.lang.String"><![CDATA[72afc2af-ef0a-4563-8ca8-57d2ef2b0c16]]></Field>
-	<Field name="Version" type="java.lang.String"><![CDATA[3920da0c0d197aab06e59067276712f5451364a5]]></Field>
+	<Field name="Version" type="java.lang.String"><![CDATA[07c7e5f0fb15946cc227cc7760fb74718861392a]]></Field>
 	<Field name="Path" type="java.lang.String"><![CDATA[Global/SMOD_Global.xml]]></Field>
 </Object>
 <Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
