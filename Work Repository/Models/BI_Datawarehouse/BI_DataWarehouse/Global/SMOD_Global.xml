@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SunopsisExport>
 <Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
-<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="ptsG1+SbaUTeaj+sMKgQ7Q==" exportKeySalt="f24f019f-4635-4706-aa09-0828295d63f5" containsCipherText="false"/>
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="P8vmCVbrZaPYbACma+6orw==" exportKeySalt="73e21520-014f-4688-b99e-034c77c96c98" containsCipherText="false"/>
 <Object class="com.sunopsis.dwg.dbobj.SnpSubModel">
 		<Field name="CodSmod" type="java.lang.String"><![CDATA[DEFAULT]]></Field>
 	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 23:53:58.0]]></Field>
@@ -12,13 +12,21 @@
 	<Field name="IMod" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
 	<Field name="ISmod" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
 	<Field name="ISmodParent" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
-	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 23:55:33.0]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
 	<Field name="LastUser" type="java.lang.String"><![CDATA[SUPERVISOR]]></Field>
 	<Field name="RevApplyPattern" type="java.lang.String">null</Field>
 	<Field name="RevPatternOrder" type="java.lang.String">null</Field>
 	<Field name="SmodName" type="java.lang.String"><![CDATA[Global]]></Field>
 	<Field name="SmodType" type="java.lang.String"><![CDATA[D]]></Field>
 	<Field name="TableNamePattern" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpChildFCO">
+		<Field name="Type" type="java.lang.String"><![CDATA[SnpTable]]></Field>
+	<Field name="SubType" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[WD_CURRENCY]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[d1649842-51d8-4214-bb6d-86ea46b4f6d1]]></Field>
+	<Field name="Version" type="java.lang.String"><![CDATA[916c1d600ed13a7386afdd7bb087774367f1b0be]]></Field>
+	<Field name="Path" type="java.lang.String"><![CDATA[TAB_WD_CURRENCY.xml]]></Field>
 </Object>
 <Object class="com.sunopsis.dwg.dbobj.SnpChildFCO">
 		<Field name="Type" type="java.lang.String"><![CDATA[SnpTable]]></Field>
