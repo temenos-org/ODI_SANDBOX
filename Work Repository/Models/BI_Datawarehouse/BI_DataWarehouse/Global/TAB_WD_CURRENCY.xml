@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SunopsisExport>
 <Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
-<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="m5icJBdCMNUWXN2PpYN6kA==" exportKeySalt="207ca6fd-533a-4a91-afd1-1fb59d755a4c" containsCipherText="false"/>
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="utLS8Kwgk44OomxMjND5Mg==" exportKeySalt="9d9c38d6-8fae-4022-b3a0-bc68461888ad" containsCipherText="false"/>
 <Object class="com.sunopsis.dwg.dbobj.SnpTable">
 		<Field name="ExtVersion" type="java.lang.String">null</Field>
 	<Field name="FileDecSep" type="java.lang.String">null</Field>
@@ -20,7 +20,7 @@
 	<Field name="HiveBuckets" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="HiveLocation" type="java.lang.String">null</Field>
 	<Field name="HiveRowFormat" type="java.lang.String">null</Field>
-	<Field name="IndChange" type="java.lang.String">null</Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[U]]></Field>
 	<Field name="IndErrDel" type="java.lang.String">null</Field>
 	<Field name="IndFilePosAuto" type="java.lang.String">null</Field>
 	<Field name="IndHiveManaged" type="java.lang.String">null</Field>
@@ -40,7 +40,7 @@
 	<Field name="ITxtDesc" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="ITxtWsdl" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="JrnOrder" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
-	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:12:37.0]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
 	<Field name="LastUser" type="java.lang.String"><![CDATA[gbarbu]]></Field>
 	<Field name="OlapType" type="java.lang.String">null</Field>
 	<Field name="OutputFormat" type="java.lang.String">null</Field>
@@ -534,6 +534,43 @@
 	<Field name="ScdColType" type="java.lang.String">null</Field>
 	<Field name="SourceDt" type="java.lang.String"><![CDATA[DATE]]></Field>
 </Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpKey">
+		<Field name="CheckFlow" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="CheckStat" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="ConsType" type="java.lang.String"><![CDATA[PK]]></Field>
+	<Field name="ExtVersion" type="java.lang.String">null</Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[gbarbu]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[76ec4ef2-f0fa-423e-80f9-7105d6659c8f]]></Field>
+	<Field name="IndActive" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[U]]></Field>
+	<Field name="IndDb" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IKey" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="ITable" type="com.sunopsis.sql.DbInt"><![CDATA[11]]></Field>
+	<Field name="KeyName" type="java.lang.String"><![CDATA[PK_WD_CURRENCY]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[gbarbu]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpKeyCol">
+		<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[gbarbu]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[aa5dc751-3bab-475a-92b2-c0cc7fbdeb5c]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[I]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[39]]></Field>
+	<Field name="IKey" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[gbarbu]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[39]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[11#WD_CURRENCY_WID]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Global #SNP_TABLE : WD_CURRENCY #SNP_COL : WD_CURRENCY_WID]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[6d1f762f-4ee6-4016-baf7-9078bd4cbf12]]></Field>
+</Object>
 <Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
 		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_SUBMODEL.1.2]]></Field>
 	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[72afc2af-ef0a-4563-8ca8-57d2ef2b0c16]]></Field>
@@ -548,13 +585,27 @@
  <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE]]></Field>
  <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.6.11]]></Field>
 </Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_KEY.1]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[76ec4ef2-f0fa-423e-80f9-7105d6659c8f]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Global.WD_CURRENCY.PK_WD_CURRENCY]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_KEY]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.6.11.14]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.39]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[6d1f762f-4ee6-4016-baf7-9078bd4cbf12]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Global.WD_CURRENCY.WD_CURRENCY_WID]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.6.11.15]]></Field>
+</Object>
 <Object class="com.sunopsis.dwg.DwgExportSummary">
 		<Field name="ExpTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
 	<Field name="InstObjNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
 	<Field name="JoinColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
 	<Field name="JoinNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
-	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
-	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
 	<Field name="LinkDiagNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
 	<Field name="MorigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
 	<Field name="MtxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
