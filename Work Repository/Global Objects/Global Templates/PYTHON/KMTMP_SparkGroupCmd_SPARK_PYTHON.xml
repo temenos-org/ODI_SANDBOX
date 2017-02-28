@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SunopsisExport>
+<Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="ebaLkz5myDgbSO9UQt9Zkg==" exportKeySalt="d2bc3eb9-d6e0-49cd-ac98-e9ffffbd0d1c" containsCipherText="false"/>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplate">
+		<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:47:22.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[fa46e622-2d00-11e6-9419-00163e1ffd72]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[I]]></Field>
+	<Field name="IndIsSeeded" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndLangTrans" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IndReplNl" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[127]]></Field>
+	<Field name="LangName" type="java.lang.String"><![CDATA[PYTHON]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-13 14:47:22.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUNOPSIS_INSTALL]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[SparkGroupCmd]]></Field>
+	<Field name="TechnoName" type="java.lang.String"><![CDATA[SPARK_PYTHON]]></Field>
+	<Field name="TemplateText" type="java.lang.String"><![CDATA[
+$[TGT_ALIAS] = $[SRC_ALIAS].map(lambda $[SRC_RDD_SHAPE.get(0)]:Row(**{ {# IF ($[INPUT_FIELD_NAMES] != 'null') #}{# FOR ($[INPUT_FIELD_NAMES],$[INPUT_ATTR_EXPRS]) IN ($[INPUT_FIELD_NAME], $[INPUT_ATTR_EXPR]) SEP = ', ' #}"$[INPUT_ATTR_EXPR]":aggFuncExpr(lambda:$[INPUT_FIELD_NAME],None){# ENDFOR #},{# ENDIF #}  
+  {# IF ($[OUTPUT_ATTR_EXPRS] != 'null') #}{# FOR ($[OUTPUT_ATTR_EXPRS],$[OUTPUT_FIELD_NAMES]) IN ($[OUTPUT_ATTR_EXPR],$[OUTPUT_FIELD_NAME]) SEP = ', ' #}"$[OUTPUT_FIELD_NAME]":aggFuncExpr(lambda:$[OUTPUT_ATTR_EXPR],None){# ENDFOR #}{# ENDIF #}}));  
+$[TGT_ALIAS] = $[TGT_ALIAS].map($[GROUP_BY_CLAUSE])
+       
+{# IF ($[STREAMING_MODE] == 'true' AND $[WINDOWING] == 'true')#}   
+$[TGT_ALIAS] = $[TGT_ALIAS].groupByKeyAndWindow($[WINDOW_DURATION], $[SLIDE_DURATION]{# IF ($[LEVEL_PARALLELISM] > '0') #}, $[LEVEL_PARALLELISM]{# ENDIF #})     
+{# ELSE #}
+$[TGT_ALIAS] = $[TGT_ALIAS].groupByKey({# IF ($[LEVEL_PARALLELISM] > '0') #}$[LEVEL_PARALLELISM]{# ENDIF #}) 
+{# ENDIF #}
+{# IF ($[HAVING_COND] != 'null') #}$[TGT_ALIAS] = $[TGT_ALIAS].filter(lambda (K, G): safeExpr(lambda:$[HAVING_COND],False));{# ENDIF #}  
+    
+{# IF ($[STREAMING_MODE] == 'true' AND $[STATEFUL] == 'true')#}
+     	
+$[TGT_ALIAS] = $[TGT_ALIAS].map(lambda (K, G):(K, Row(**{{# IF ($[GROUP_BY_ALIASES] != 'null') #}{# IF ($[GROUP_BY_ALIASES.size()] == '1') #}"$[GROUP_BY_ALIASES.get(0)]":K{# ELSE #}{# FOR ($[GROUP_BY_ALIASES], $[GROUP_BY_INDICES]) IN ($[GROUP_BY_ALIAS], $[GROUP_BY_INDEX]) SEP = ', ' #}"$[GROUP_BY_ALIAS]":K[$[GROUP_BY_INDEX]]{# ENDFOR #}{# ENDIF #}{# ENDIF #}
+{# IF ($[SIMPLE_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_1] == 'true') #},{# ENDIF #}{# FOR ($[SIMPLE_AGGR_FUNCS],$[SIMPLE_AGGR_ALIASES]) IN ($[SIMPLE_AGGR_FUNC],$[SIMPLE_AGGR_ALIAS]) SEP = ', ' #}"$[SIMPLE_AGGR_ALIAS]": $[SIMPLE_AGGR_FUNC](map((lambda row: row.$[SIMPLE_AGGR_ALIAS]), G)) {# ENDFOR #}{# ENDIF #}
+{# IF ($[COMPLEX_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_2] == 'true') #},{# ENDIF #}{# FOR ($[COMPLEX_AGGR_FUNCS],$[COMPLEX_AGGR_ALIASES]) IN ($[COMPLEX_AGGR_FUNC],$[COMPLEX_AGGR_ALIAS]) SEP = ', ' #}"$[COMPLEX_AGGR_ALIAS]": $[COMPLEX_AGGR_FUNC]{# ENDFOR #}{# ENDIF #}
+{# IF ($[DIRECT_MAP_ALIASES] != 'null') #}{# IF ($[COMMA_3] == 'true') #},{# ENDIF #}"$[SRC_ALIAS]:{({# FOR ($[DIRECT_MAP_ALIASES]) IN ($[DIRECT_MAP_ALIAS]) SEP = ', ' #}$[DIRECT_MAP_ALIAS]{# ENDFOR #})}": map(lambda row: {{# FOR ($[DIRECT_MAP_ALIASES]) IN ($[DIRECT_MAP_ALIAS]) SEP = ', ' #}"$[DIRECT_MAP_ALIAS]": row.$[DIRECT_MAP_ALIAS]{# ENDFOR #}}  ,G) {# ENDIF #}})));
+
+def COUNT_STATE(x): return x[0] + x[1];    
+
+{# IF ($[RETENTION_PERIOD] == '0')#}
+        
+def updateState (v, s):
+  {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}    
+  print "Current value"
+  print(v);
+  print "State"    	
+  print(s);
+  {# ENDIF #}    	
+  if (s is None) or not s:
+    {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}
+    print "State is null"
+    {# ENDIF #} 	
+    return v[0];
+  if (v is None) or not v:
+    {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}
+    print "Current value is null"
+    {# ENDIF #} 	
+    return s;	    
+  else:
+    {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}
+    print "Merging current value and state"
+    {# ENDIF #}
+    v = v[0];
+    s = s;
+    data = Row(**{{# IF ($[GROUP_BY_ALIASES] != 'null') #}{# FOR ($[GROUP_BY_ALIASES]) IN ($[GROUP_BY_ALIAS]) SEP = ', ' #}"$[GROUP_BY_ALIAS]":v.$[GROUP_BY_ALIAS]{# ENDFOR #}{# ENDIF #}
+    {# IF ($[SIMPLE_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_1] == 'true') #},{# ENDIF #}{# FOR ($[SIMPLE_AGGR_FUNCS],$[SIMPLE_AGGR_ALIASES]) IN ($[SIMPLE_AGGR_FUNC],$[SIMPLE_AGGR_ALIAS]) SEP = ', ' #}"$[SIMPLE_AGGR_ALIAS]":{# IF ($[SIMPLE_AGGR_FUNC] == 'COUNT') #}$[SIMPLE_AGGR_FUNC]_STATE{# ELSE #}$[SIMPLE_AGGR_FUNC]{# ENDIF #}([v.$[SIMPLE_AGGR_ALIAS], s.$[SIMPLE_AGGR_ALIAS]]){# ENDFOR #}{# ENDIF #}
+    {# IF ($[COMPLEX_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_2] == 'true') #},{# ENDIF #}{# FOR ($[COMPLEX_AGGR_ALIASES]) IN ($[COMPLEX_AGGR_ALIAS]) SEP = ', ' #}"$[COMPLEX_AGGR_ALIAS]":v.$[COMPLEX_AGGR_ALIAS]{# ENDFOR #}{# ENDIF #}
+    {# IF ($[DIRECT_MAP_ALIASES] != 'null') #}{# IF ($[COMMA_3] == 'true') #},{# ENDIF #}{# FOR ($[DIRECT_MAP_ALIASES]) IN ($[DIRECT_MAP_ALIAS]) SEP = ', ' #}"$[DIRECT_MAP_ALIAS]":v.$[DIRECT_MAP_ALIAS]{# ENDFOR #} {# ENDIF #}})
+    	    
+    return data;
+    	
+$[TGT_ALIAS]_STATE = $[TGT_ALIAS].updateStateByKey(updateState) 
+{# IF ($[UPDATES_ONLY] == 'true'#}
+$[TGT_ALIAS]_STATE = $[TGT_ALIAS]_STATE.join($[TGT_ALIAS])
+$[TGT_ALIAS] = $[TGT_ALIAS]_STATE.map(lambda (K, G):G[0])    
+{# ELSE #}    
+$[TGT_ALIAS] = $[TGT_ALIAS]_STATE.map(lambda (K, G):G)
+{# ENDIF #}         	    
+
+{# ELSE #} 
+    
+$[TGT_ALIAS] = $[TGT_ALIAS].map(lambda (K, G):(K,[G, datetime.now()]))
+    
+def updateState (v, s):
+  {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}  
+  print "Current value"
+  print(v);
+  print "State"    	
+  print(s);
+  {# ENDIF #}    
+  if (s is None) or not s:
+    {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #}
+    print "State is null"
+    {# ENDIF #}
+    return v[0];
+  current = datetime.now();    
+  duration = current - s[1];
+  {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #} 
+  print "Timestamp" 
+  print(duration.seconds)
+  {# ENDIF #}  	
+  if (v is None) or not v:
+    {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #} 
+    print "Current value is null" 
+    {# ENDIF #} 
+    if duration.seconds > $[RETENTION_PERIOD]:
+       {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #} 
+       print "Retention period exceeded"
+       {# ENDIF #} 
+       return None
+    else:
+       return s;
+  else:
+    {# IF ($[SPARK_STREAMING_DEBUG] == 'true') #} 
+    print "Merging current value and state"
+    {# ENDIF #}	 
+    v = v[0][0];   
+    s = s[0];
+    data = Row(**{{# IF ($[GROUP_BY_ALIASES] != 'null') #}{# FOR ($[GROUP_BY_ALIASES]) IN ($[GROUP_BY_ALIAS]) SEP = ', ' #}"$[GROUP_BY_ALIAS]":v.$[GROUP_BY_ALIAS]{# ENDFOR #}{# ENDIF #}
+    {# IF ($[SIMPLE_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_1] == 'true') #},{# ENDIF #}{# FOR ($[SIMPLE_AGGR_FUNCS],$[SIMPLE_AGGR_ALIASES]) IN ($[SIMPLE_AGGR_FUNC],$[SIMPLE_AGGR_ALIAS]) SEP = ', ' #}"$[SIMPLE_AGGR_ALIAS]":{# IF ($[SIMPLE_AGGR_FUNC] == 'COUNT') #}$[SIMPLE_AGGR_FUNC]_STATE{# ELSE #}$[SIMPLE_AGGR_FUNC]{# ENDIF #}([v.$[SIMPLE_AGGR_ALIAS], s.$[SIMPLE_AGGR_ALIAS]]){# ENDFOR #}{# ENDIF #}
+    {# IF ($[COMPLEX_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_2] == 'true') #},{# ENDIF #}{# FOR ($[COMPLEX_AGGR_ALIASES]) IN ($[COMPLEX_AGGR_ALIAS]) SEP = ', ' #}"$[COMPLEX_AGGR_ALIAS]":v.$[COMPLEX_AGGR_ALIAS]{# ENDFOR #}{# ENDIF #}
+    {# IF ($[DIRECT_MAP_ALIASES] != 'null') #}{# IF ($[COMMA_3] == 'true') #},{# ENDIF #}{# FOR ($[DIRECT_MAP_ALIASES]) IN ($[DIRECT_MAP_ALIAS]) SEP = ', ' #}"$[DIRECT_MAP_ALIAS]":v.$[DIRECT_MAP_ALIAS]{# ENDFOR #} {# ENDIF #}})
+     
+    return [data, datetime.now()];   
+ 
+$[TGT_ALIAS]_STATE = $[TGT_ALIAS].updateStateByKey(updateState)
+{# IF ($[UPDATES_ONLY] == 'true'#}
+$[TGT_ALIAS]_STATE = $[TGT_ALIAS]_STATE.join($[TGT_ALIAS])
+$[TGT_ALIAS] = $[TGT_ALIAS]_STATE.map(lambda (K, G):G[0][0])
+{# ELSE #}     	     
+$[TGT_ALIAS] = $[TGT_ALIAS]_STATE.map(lambda (K, G):G[0])
+{# ENDIF #}      
+
+{# ENDIF #}
+    	           	        
+{# ELSE #}
+        	 
+$[TGT_ALIAS] = $[TGT_ALIAS].map(lambda (K, G):Row(**{{# IF ($[GROUP_BY_ALIASES] != 'null') #}{# IF ($[GROUP_BY_ALIASES.size()] == '1') #}"$[GROUP_BY_ALIASES.get(0)]":K{# ELSE #}{# FOR ($[GROUP_BY_ALIASES], $[GROUP_BY_INDICES]) IN ($[GROUP_BY_ALIAS], $[GROUP_BY_INDEX]) SEP = ', ' #}"$[GROUP_BY_ALIAS]":K[$[GROUP_BY_INDEX]]{# ENDFOR #}{# ENDIF #}{# ENDIF #}
+{# IF ($[SIMPLE_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_1] == 'true') #},{# ENDIF #}{# FOR ($[SIMPLE_AGGR_FUNCS],$[SIMPLE_AGGR_ALIASES]) IN ($[SIMPLE_AGGR_FUNC],$[SIMPLE_AGGR_ALIAS]) SEP = ', ' #}"$[SIMPLE_AGGR_ALIAS]": $[SIMPLE_AGGR_FUNC](map((lambda row: row.$[SIMPLE_AGGR_ALIAS]), G)) {# ENDFOR #}{# ENDIF #}
+{# IF ($[COMPLEX_AGGR_ALIASES] != 'null') #}{# IF ($[COMMA_2] == 'true') #},{# ENDIF #}{# FOR ($[COMPLEX_AGGR_FUNCS],$[COMPLEX_AGGR_ALIASES]) IN ($[COMPLEX_AGGR_FUNC],$[COMPLEX_AGGR_ALIAS]) SEP = ', ' #}"$[COMPLEX_AGGR_ALIAS]": $[COMPLEX_AGGR_FUNC]{# ENDFOR #}{# ENDIF #}
+{# IF ($[DIRECT_MAP_ALIASES] != 'null') #}{# IF ($[COMMA_3] == 'true') #},{# ENDIF #}"$[SRC_ALIAS]:{({# FOR ($[DIRECT_MAP_ALIASES]) IN ($[DIRECT_MAP_ALIAS]) SEP = ', ' #}$[DIRECT_MAP_ALIAS]{# ENDFOR #})}": map(lambda row: {{# FOR ($[DIRECT_MAP_ALIASES]) IN ($[DIRECT_MAP_ALIAS]) SEP = ', ' #}"$[DIRECT_MAP_ALIAS]": row.$[DIRECT_MAP_ALIAS]{# ENDFOR #}}  ,G) {# ENDIF #}}));
+
+{# ENDIF #}
+{# INCLUDE = 'SparkPartitionRedistributeAndSort' #}]]></Field>
+	<Field name="TemplateVersion" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpKmTemplateJoin">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[39e1d4a4-38e6-4adf-8573-304f629637fe]]></Field>
+	<Field name="ISnpKmTemplate" type="com.sunopsis.sql.DbInt"><![CDATA[127]]></Field>
+	<Field name="ISnpTrt" type="com.sunopsis.sql.DbInt"><![CDATA[116]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TRT.116]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[1986feab-eca2-4f5a-96a8-ecf827ac7cda]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[LKM Spark to File]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_TRT]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[17]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_KMTEMPLATE.127]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[fa46e622-2d00-11e6-9419-00163e1ffd72]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[SparkGroupCmd]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_KMTEMPLATE]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[13]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.DwgExportSummary">
+		<Field name="ExpTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="InstObjNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="LinkDiagNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MorigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MtxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OrigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OtherObjectsNb" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="PlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="StepNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="TxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeOrigNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeUsedNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="VarPlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="ScenTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OdiVersion" type="java.lang.String"><![CDATA[12.2.1]]></Field>
+	<Field name="OriginRepositoryID" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="RepositoryVersion" type="java.lang.String"><![CDATA[05.02.02.05]]></Field>
+</Object>
+</SunopsisExport>
