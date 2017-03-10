@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SunopsisExport>
+<Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="/F9NUIMm5JGP2MBsyC7LHA==" exportKeySalt="4443f79d-a1ef-4af6-875e-190578b59644" containsCipherText="false"/>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimension">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="DimensionType" type="java.lang.String"><![CDATA[0]]></Field>
+	<Field name="FirstDate" type="java.sql.Timestamp"><![CDATA[2017-03-02 15:36:14.0]]></Field>
+	<Field name="FirstUser" type="java.lang.String"><![CDATA[SUPERVISOR]]></Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[85bbe52f-5fa0-406f-940a-198abd1e4da7]]></Field>
+	<Field name="IndChange" type="java.lang.String"><![CDATA[U]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IDim" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IDimTable" type="com.sunopsis.sql.DbInt"><![CDATA[43]]></Field>
+	<Field name="IErrTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimMod" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="ISeq" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-03-02 15:42:21.0]]></Field>
+	<Field name="LastUser" type="java.lang.String"><![CDATA[SUPERVISOR]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Time]]></Field>
+	<Field name="OrphanDelPolicy" type="java.lang.String"><![CDATA[N]]></Field>
+	<Field name="OrphanInvParent" type="java.lang.String"><![CDATA[N]]></Field>
+	<Field name="OrphanNullParent" type="java.lang.String"><![CDATA[N]]></Field>
+	<Field name="PatternName" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2400]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[43]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[1#TIME]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[d0ee9405-048b-4728-8c8d-ae25ef890ee5]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevel">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[5be3d14a-286f-473c-a555-f7b389b6fe75]]></Field>
+	<Field name="IDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IErrTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="ILevelTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDim" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IStgTable" type="com.sunopsis.sql.DbInt"><![CDATA[38]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Month]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2400]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[38]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[1#STG_MONTH]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_MONTH]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[009991b6-bcb5-4bf3-aed0-3fc6609438e1]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevelAttr">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[fbccb7fd-013e-4dd1-9f3f-c8fee2c61c1f]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[126]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IScd3EffDate" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IScd3Previous" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[106]]></Field>
+	<Field name="Length" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="LevelAttrRole" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Id_Month]]></Field>
+	<Field name="OrphanDefValue" type="java.lang.String">null</Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="Scale" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+	<Field name="SourceDt" type="java.lang.String"><![CDATA[NUMERIC]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[106]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[38#ID_MONTH]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_MONTH #SNP_COL : ID_MONTH]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[60b676e7-84c4-422f-a612-646b841ff722]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[126]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#ID_MONTH]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : ID_MONTH]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[9a370b6b-e1a4-4762-8d65-fdd2e388a7a6]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevelAttr">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[cde740d4-6ea3-42f4-be3d-b68b082c6c43]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[129]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IScd3EffDate" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IScd3Previous" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[109]]></Field>
+	<Field name="Length" type="com.sunopsis.sql.DbInt"><![CDATA[10]]></Field>
+	<Field name="LevelAttrRole" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Month]]></Field>
+	<Field name="OrphanDefValue" type="java.lang.String">null</Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Scale" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+	<Field name="SourceDt" type="java.lang.String"><![CDATA[VARCHAR]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[109]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[38#MONTH]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_MONTH #SNP_COL : MONTH]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[67ae0939-1327-4daf-8241-2b1cd3bb8107]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[129]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#MONTH]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : MONTH]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[fe86bcb1-5102-4a8a-8970-217c36c12b96]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimNatkeyMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[e3092c11-ca47-48f6-af6b-7ecb9e5578a3]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IDimNatkeyMember" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11300]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[2]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Id_Month#1]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Month #SNP_DIMLEVELATTR : Id_Month]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[fbccb7fd-013e-4dd1-9f3f-c8fee2c61c1f]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimParRef">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[2c6d98da-b4db-4043-841b-292bc494ac6d]]></Field>
+	<Field name="IDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IParDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[PARENTREF_QUARTER]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11200]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[2]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Quarter#1]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Quarter]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[d32b6155-8067-4c9d-b076-0bd29ec7e4b7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimRefMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[98b41b9f-6384-49b6-af0b-667296450957]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[127]]></Field>
+	<Field name="IDimNatkeyMem" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IDimRefMember" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[107]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[107]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[38#ID_QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_MONTH #SNP_COL : ID_QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[fcaedc31-8a11-45ec-96c0-afc88218bd3f]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[127]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#ID_QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : ID_QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[fe7f021c-1705-4f97-b9da-6231801c794f]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevel">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[d32b6155-8067-4c9d-b076-0bd29ec7e4b7]]></Field>
+	<Field name="IDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IErrTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="ILevelTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDim" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IStgTable" type="com.sunopsis.sql.DbInt"><![CDATA[40]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Quarter]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2400]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[40]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[1#STG_QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[85525578-8c93-450d-a445-f5f8f58c5c81]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevelAttr">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[9f489acb-136b-403a-9e64-018ce1cd896d]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[127]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IScd3EffDate" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IScd3Previous" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[116]]></Field>
+	<Field name="Length" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="LevelAttrRole" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Id_Quarter]]></Field>
+	<Field name="OrphanDefValue" type="java.lang.String">null</Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="Scale" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+	<Field name="SourceDt" type="java.lang.String"><![CDATA[NUMERIC]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[116]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[40#ID_QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_QUARTER #SNP_COL : ID_QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[65af0f04-b956-4462-8594-07051c4c6c81]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[127]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#ID_QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : ID_QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[fe7f021c-1705-4f97-b9da-6231801c794f]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevelAttr">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[5fd744c2-8f00-4d73-b51c-df84a9b5aef4]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[130]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[4]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IScd3EffDate" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IScd3Previous" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[118]]></Field>
+	<Field name="Length" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="LevelAttrRole" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Quarter]]></Field>
+	<Field name="OrphanDefValue" type="java.lang.String">null</Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Scale" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+	<Field name="SourceDt" type="java.lang.String"><![CDATA[VARCHAR]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[118]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[40#QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_QUARTER #SNP_COL : QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[4db3c77d-e1ee-4c8c-a18c-b76b781cb3cf]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[130]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#QUARTER]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : QUARTER]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[65cf8841-2593-44f5-9600-37fb7bc33c89]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimNatkeyMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[6b9f9cbf-fb2f-49be-a51c-e77da09dbc3d]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IDimNatkeyMember" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11300]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[3]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Id_Quarter#2]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Quarter #SNP_DIMLEVELATTR : Id_Quarter]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[9f489acb-136b-403a-9e64-018ce1cd896d]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimParRef">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[89058afc-2fdf-4388-ac30-c957837f8d07]]></Field>
+	<Field name="IDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IParDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[PARENTREF_YEAR]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11200]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[3]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Year#1]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Year]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[0af0006d-d329-4b6c-95c3-2f4fc7864b20]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimRefMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[91b5c18c-d67f-4df8-b83a-bf4d2232e263]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[128]]></Field>
+	<Field name="IDimNatkeyMem" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IDimRefMember" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[117]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[117]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[40#ID_YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_QUARTER #SNP_COL : ID_YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[188ef4ee-d346-4dfb-9389-0268e135bb98]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[128]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#ID_YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : ID_YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[577dadcc-1323-4f9d-a75b-2fdbe259ec6a]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevel">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[0af0006d-d329-4b6c-95c3-2f4fc7864b20]]></Field>
+	<Field name="IDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IErrTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="ILevelTable" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDim" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IStgTable" type="com.sunopsis.sql.DbInt"><![CDATA[42]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Year]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2400]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[42]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[1#STG_YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[487d5884-d9e9-4565-99e1-e0915fe53caa]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevelAttr">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[d68c9fd5-5cd3-49de-bf30-71e985271271]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[128]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[5]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IScd3EffDate" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IScd3Previous" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[124]]></Field>
+	<Field name="Length" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="LevelAttrRole" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Id_Year]]></Field>
+	<Field name="OrphanDefValue" type="java.lang.String">null</Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="Scale" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+	<Field name="SourceDt" type="java.lang.String"><![CDATA[NUMERIC]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[124]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[42#ID_YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_YEAR #SNP_COL : ID_YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[ee429648-69a1-4278-ad49-d3eb7d44a1da]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[128]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#ID_YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : ID_YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[577dadcc-1323-4f9d-a75b-2fdbe259ec6a]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimLevelAttr">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[341b6e3e-4836-4111-a1c1-7d5312beb6e6]]></Field>
+	<Field name="ICol" type="com.sunopsis.sql.DbInt"><![CDATA[131]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[6]]></Field>
+	<Field name="IErrCol" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IScd3EffDate" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IScd3Previous" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IStgCol" type="com.sunopsis.sql.DbInt"><![CDATA[125]]></Field>
+	<Field name="Length" type="com.sunopsis.sql.DbInt"><![CDATA[4]]></Field>
+	<Field name="LevelAttrRole" type="java.lang.String">null</Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[Year]]></Field>
+	<Field name="OrphanDefValue" type="java.lang.String">null</Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Scale" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="Scd2Role" type="java.lang.String">null</Field>
+	<Field name="SourceDt" type="java.lang.String"><![CDATA[VARCHAR]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[125]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[42#YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : STG_YEAR #SNP_COL : YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[b8f50110-0d58-4180-af0d-6da57f606c6d]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[2600]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[131]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[43#YEAR]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_MODFOLDER : BI Datawarehouse #SNP_MODEL : BI DataWarehouse #SNP_SUBMODEL : Gabriel #SNP_TABLE : TIME #SNP_COL : YEAR]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[91225edb-9f08-4e5b-a1eb-6f7d087c416a]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimNatkeyMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[5be9c40d-b6cd-4122-9708-2263fe1cc066]]></Field>
+	<Field name="IDimLevelAttr" type="com.sunopsis.sql.DbInt"><![CDATA[5]]></Field>
+	<Field name="IDimNatkeyMember" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IOwnerDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11300]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[5]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Id_Year#3]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Year #SNP_DIMLEVELATTR : Id_Year]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[d68c9fd5-5cd3-49de-bf30-71e985271271]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimHier">
+		<Field name="Description" type="java.lang.String">null</Field>
+	<Field name="GlobalId" type="java.lang.String"><![CDATA[df3fb5c1-ce38-465d-9029-b242ec387d60]]></Field>
+	<Field name="IsLoadingHier" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="IDimHier" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IOwnerDim" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Name" type="java.lang.String"><![CDATA[YQM]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimHierMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[f16cba96-abee-4714-87ad-86277e26940a]]></Field>
+	<Field name="IDimHierMem" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IOwnerDimHier" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11200]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[1]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Month#1]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Month]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[5be3d14a-286f-473c-a555-f7b389b6fe75]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimHierMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[0926ed12-6f79-4bfc-8244-42c0e152fc47]]></Field>
+	<Field name="IDimHierMem" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="IDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
+	<Field name="IOwnerDimHier" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11200]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[3]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Year#1]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Year]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[0af0006d-d329-4b6c-95c3-2f4fc7864b20]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpDimHierMem">
+		<Field name="GlobalId" type="java.lang.String"><![CDATA[3f17000d-23a3-427f-9037-1564a8bf3b24]]></Field>
+	<Field name="IDimHierMem" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IDimLevel" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IDimParRef" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+	<Field name="IOwnerDimHier" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="Pos" type="com.sunopsis.sql.DbInt"><![CDATA[2]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpReferencedObject">
+		<Field name="IObject" type="com.sunopsis.sql.DbInt"><![CDATA[11200]]></Field>
+	<Field name="ObjectPKasString" type="java.lang.String"><![CDATA[2]]></Field>
+	<Field name="ObjectAKasString" type="java.lang.String"><![CDATA[Quarter#1]]></Field>
+	<Field name="Description" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD : Gabriel #SNP_DIMENSION : Time #SNP_DIMLEVEL : Quarter]]></Field>
+ <Field name="GlobalId" type="java.lang.String"><![CDATA[d32b6155-8067-4c9d-b076-0bd29ec7e4b7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.1]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[7629c188-03cd-4b86-aba3-2d0eb38884bf]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TABLE.43]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[d0ee9405-048b-4728-8c8d-ae25ef890ee5]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMENSION.1]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[85bbe52f-5fa0-406f-940a-198abd1e4da7]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TABLE.38]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[009991b6-bcb5-4bf3-aed0-3fc6609438e1]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_MONTH]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.9]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMLEVEL.1]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[5be3d14a-286f-473c-a555-f7b389b6fe75]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Month]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.5]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.126]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[9a370b6b-e1a4-4762-8d65-fdd2e388a7a6]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME.ID_MONTH]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4.8]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.106]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[60b676e7-84c4-422f-a612-646b841ff722]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_MONTH.ID_MONTH]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.9.8]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.129]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[fe86bcb1-5102-4a8a-8970-217c36c12b96]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME.MONTH]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4.5]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.109]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[67ae0939-1327-4daf-8241-2b1cd3bb8107]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_MONTH.MONTH]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.9.5]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMLEVELATTR.2]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[fbccb7fd-013e-4dd1-9f3f-c8fee2c61c1f]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Month.Id_Month]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL.SNP_DIMLEVELATTR]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.5.8]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMLEVEL.2]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[d32b6155-8067-4c9d-b076-0bd29ec7e4b7]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Quarter]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMPARREF.1]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[2c6d98da-b4db-4043-841b-292bc494ac6d]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Month.PARENTREF_QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL.SNP_DIMPARREF]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.5.17]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMNATKEYMEM.2]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[6b9f9cbf-fb2f-49be-a51c-e77da09dbc3d]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String">null</Field>
+ <Field name="RefObjFQType" type="java.lang.String">null</Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.127]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[fe7f021c-1705-4f97-b9da-6231801c794f]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME.ID_QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4.10]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.107]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[fcaedc31-8a11-45ec-96c0-afc88218bd3f]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_MONTH.ID_QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.9.10]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TABLE.40]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[85525578-8c93-450d-a445-f5f8f58c5c81]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.11]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.116]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[65af0f04-b956-4462-8594-07051c4c6c81]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_QUARTER.ID_QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.11.10]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.130]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[65cf8841-2593-44f5-9600-37fb7bc33c89]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME.QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.118]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[4db3c77d-e1ee-4c8c-a18c-b76b781cb3cf]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_QUARTER.QUARTER]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.11.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMLEVELATTR.3]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[9f489acb-136b-403a-9e64-018ce1cd896d]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Quarter.Id_Quarter]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL.SNP_DIMLEVELATTR]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.7.10]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMLEVEL.3]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[0af0006d-d329-4b6c-95c3-2f4fc7864b20]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Year]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.4]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMPARREF.2]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[89058afc-2fdf-4388-ac30-c957837f8d07]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Quarter.PARENTREF_YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL.SNP_DIMPARREF]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.7.14]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMNATKEYMEM.3]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[5be9c40d-b6cd-4122-9708-2263fe1cc066]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String">null</Field>
+ <Field name="RefObjFQType" type="java.lang.String">null</Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String">null</Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.128]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[577dadcc-1323-4f9d-a75b-2fdbe259ec6a]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME.ID_YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.117]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[188ef4ee-d346-4dfb-9389-0268e135bb98]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_QUARTER.ID_YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.11.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_TABLE.42]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[487d5884-d9e9-4565-99e1-e0915fe53caa]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.8]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.124]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[ee429648-69a1-4278-ad49-d3eb7d44a1da]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_YEAR.ID_YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.8.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.131]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[91225edb-9f08-4e5b-a1eb-6f7d087c416a]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.TIME.YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.4.4]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_COL.125]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[b8f50110-0d58-4180-af0d-6da57f606c6d]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[BI Datawarehouse.BI DataWarehouse.Gabriel.STG_YEAR.YEAR]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_MODFOLDER.SNP_MODEL.SNP_SUBMODEL.SNP_TABLE.SNP_COL]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[16.16.7.8.4]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMLEVELATTR.5]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[d68c9fd5-5cd3-49de-bf30-71e985271271]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.Year.Id_Year]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMLEVEL.SNP_DIMLEVELATTR]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.4.7]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
+		<Field name="RefKey" type="java.lang.String"><![CDATA[SNP_DIMHIER.1]]></Field>
+	<Field name="RefObjGlobalId" type="java.lang.String"><![CDATA[df3fb5c1-ce38-465d-9029-b242ec387d60]]></Field>
+ <Field name="RefObjFQName" type="java.lang.String"><![CDATA[Gabriel.Time.YQM]]></Field>
+ <Field name="RefObjFQType" type="java.lang.String"><![CDATA[SNP_DIMENSIONMOD.SNP_DIMENSION.SNP_DIMHIER]]></Field>
+ <Field name="RefObjFQNameLengths" type="java.lang.String"><![CDATA[7.4.3]]></Field>
+</Object>
+<Object class="com.sunopsis.dwg.DwgExportSummary">
+		<Field name="ExpTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="InstObjNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="JoinNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyColNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="KeyNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="LinkDiagNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MorigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="MtxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OrigTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OtherObjectsNb" type="com.sunopsis.sql.DbInt"><![CDATA[21]]></Field>
+	<Field name="PlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="StepNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="TxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeOrigNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="UeUsedNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="VarPlanAgentNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="ScenTxtNb" type="com.sunopsis.sql.DbInt"><![CDATA[0]]></Field>
+	<Field name="OdiVersion" type="java.lang.String"><![CDATA[12.2.1]]></Field>
+	<Field name="OriginRepositoryID" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
+	<Field name="RepositoryVersion" type="java.lang.String"><![CDATA[05.02.02.05]]></Field>
+</Object>
+</SunopsisExport>
