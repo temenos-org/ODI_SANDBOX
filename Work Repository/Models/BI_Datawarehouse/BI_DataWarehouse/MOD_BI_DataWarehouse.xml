@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SunopsisExport>
 <Admin RepositoryVersion="05.02.02.05" IsLegacyIdCompatible="false" />
-<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="N4siUyJputlmnpnkvQbv3A==" exportKeySalt="0c9281c0-9369-4e98-b456-203cb0213681" containsCipherText="false"/>
+<Encryption algorithm="AES" keyLength="128" exportKeyHash="" keyVect="SyJs+qzl0dDbSvMDKQsgxA==" exportKeySalt="9d5e1978-25cc-423e-adbf-f75dd34bcb1c" containsCipherText="false"/>
 <Object class="com.sunopsis.dwg.dbobj.SnpModel">
 		<Field name="AliasLength" type="com.sunopsis.sql.DbInt"><![CDATA[35]]></Field>
 	<Field name="BegVersion" type="java.sql.Timestamp">null</Field>
@@ -14,7 +14,7 @@
 	<Field name="IndChange" type="java.lang.String"><![CDATA[U]]></Field>
 	<Field name="IndEvoJdbc" type="java.lang.String"><![CDATA[0]]></Field>
 	<Field name="IndJrnMethod" type="java.lang.String"><![CDATA[S]]></Field>
-	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[3]]></Field>
+	<Field name="IntVersion" type="com.sunopsis.sql.DbInt"><![CDATA[5]]></Field>
 	<Field name="IDefFolder" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="IGenericModel" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="IMod" type="com.sunopsis.sql.DbInt"><![CDATA[1]]></Field>
@@ -25,7 +25,7 @@
 	<Field name="ITrtSkm" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="ITxtMod" type="com.sunopsis.sql.DbInt"><![CDATA[null]]></Field>
 	<Field name="LagentName" type="java.lang.String">null</Field>
-	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-02-28 13:23:18.0]]></Field>
+	<Field name="LastDate" type="java.sql.Timestamp"><![CDATA[2017-03-09 16:23:34.0]]></Field>
 	<Field name="LastUser" type="java.lang.String"><![CDATA[SUPERVISOR]]></Field>
 	<Field name="LschemaName" type="java.lang.String"><![CDATA[BI_DATAWAREHOUSE]]></Field>
 	<Field name="ModName" type="java.lang.String"><![CDATA[BI DataWarehouse]]></Field>
@@ -34,7 +34,7 @@
 	<Field name="RevAliasLtrim" type="java.lang.String">null</Field>
 	<Field name="RevContext" type="java.lang.String"><![CDATA[GLOBAL]]></Field>
 	<Field name="RevInsert" type="java.lang.String">null</Field>
-	<Field name="RevObjPatt" type="java.lang.String"><![CDATA[%]]></Field>
+	<Field name="RevObjPatt" type="java.lang.String"><![CDATA[WD_%]]></Field>
 	<Field name="RevObjType" type="java.lang.String"><![CDATA[T]]></Field>
 	<Field name="RevType" type="java.lang.String"><![CDATA[S]]></Field>
 	<Field name="RevUpdate" type="java.lang.String">null</Field>
@@ -65,7 +65,7 @@
 	<Field name="SubType" type="java.lang.String">null</Field>
 	<Field name="Name" type="java.lang.String"><![CDATA[Global]]></Field>
 	<Field name="GlobalId" type="java.lang.String"><![CDATA[72afc2af-ef0a-4563-8ca8-57d2ef2b0c16]]></Field>
-	<Field name="Version" type="java.lang.String"><![CDATA[07c7e5f0fb15946cc227cc7760fb74718861392a]]></Field>
+	<Field name="Version" type="java.lang.String"><![CDATA[640e6369c882ce79aa347e64a9e7270709f670a6]]></Field>
 	<Field name="Path" type="java.lang.String"><![CDATA[Global/SMOD_Global.xml]]></Field>
 </Object>
 <Object class="com.sunopsis.dwg.dbobj.SnpFKXRef">
